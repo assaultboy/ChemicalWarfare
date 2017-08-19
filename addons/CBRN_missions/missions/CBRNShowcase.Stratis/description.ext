@@ -1,0 +1,12 @@
+class cfgFunctions
+{
+	class showcase
+	{
+		class functions
+		{
+			file = "functions";
+			
+			class lockCrate {};
+		};
+	};
+};
