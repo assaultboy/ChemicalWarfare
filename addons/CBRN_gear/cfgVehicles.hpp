@@ -14,19 +14,4 @@ class CfgVehicles {
 			};
 		};
 	};
-	
-	//Adding our custom artillery shells and etc
-	class MBT_01_arty_base_F;
-	class B_MBT_01_arty_base_F: MBT_01_arty_base_F {
-		class Turrets {
-			class MainTurret;
-		};
-	};
-	class B_MBT_01_arty_F: B_MBT_01_arty_base_F {
-		class Turrets: Turrets {
-			class MainTurret: MainTurret {
-				magazines[] += {"CBRN_6Rnd_155mm_Mo_nerveAgent"};
-			};
-		};
-	};
 };

@@ -59,12 +59,6 @@ class cfgWeapons
 		};
 	};
 	
-	//Our custom artillery shells
-	class CannonCore;
-	class mortar_155mm_AMOS: CannonCore {
-		magazines[] += {"CBRN_6Rnd_155mm_Mo_nerveAgent"};
-	};
-	
 	//SUITS----------------------------------------
 	class U_B_CombatUniform_mcam;
 	class U_O_CombatUniform_ocamo;

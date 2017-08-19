@@ -18,13 +18,4 @@ class CfgMagazines {
 		displayNameShort = "Nerve Agent";
 		CBRN_chemicalLevel = 2;
 	};
-	
-	class 6Rnd_155mm_Mo_smoke;
-	class CBRN_6Rnd_155mm_Mo_nerveAgent {
-		ammo = "Smoke_120mm_AMOS_White"; //Change
-		author = "Assaultboy";
-		displayName = "Nerve Agent";
-		displayNameShort = "Nerve Agent";
-		CBRN_chemicalLevel = 2;
-	};
 };
