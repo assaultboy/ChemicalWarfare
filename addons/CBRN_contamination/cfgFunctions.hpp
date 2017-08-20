@@ -9,7 +9,7 @@ class CfgFunctions
 			class createContaminatedArea {};
 			class spawnChemicalStrike {};
 			class getContaminationMessage {};
-			class startChemicalDamageLoop {};
+			class addChemicalDamageHandler {};
 			
 			//AI stuff
 			class reactToChemicals {};
