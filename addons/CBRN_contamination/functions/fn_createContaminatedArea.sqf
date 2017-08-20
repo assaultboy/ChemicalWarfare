@@ -50,56 +50,6 @@ _area setVariable ["CBRN_index", CBRN_var_contaminatedAreas pushback _area];
 //Lets see if sober me ever finds this comment lol
 //I did
 
-/*
-_nil = (_area spawn {
-	private _MOPPLevel = (_this getVariable ["CBRN_MOPP", 0]);
-	private _lethality = (_this getVariable ["CBRN_lethality", 0]);
-	private _lifetime = (_this getVariable ["CBRN_lifetime", 0]);
-	
-	while {(_lifetime > 0) || (_lifetime == -1)} do {
-		sleep 1;
-		
-		//Make sure our trigger still exists
-		if (!(isNil "_this") && !(isNull _this)) then {
-			//For each unit inside the area of effect
-			{
-				//Make sure it's a man and it's alive
-				if (((_x isKindOf "CAManBase") && !(_x isKindOf "VirtualMan_F")) && (alive _x)) then {
-					//Check if they are in a high enough level MOPP to avoid contamination
-					if ((_x call CBRN_fnc_getMOPPLevel) < _MOPPLevel) then {
-						private _contamination = (_x getVariable ["CBRN_contaminationLevel", 0]);
-						
-						//If we are not maxed out on contamination than add some
-						if (_contamination < 1) then {_x setVariable ["CBRN_contaminationLevel", (_contamination + _lethality) min 1]};
-						
-						//If its our first time being contaminated than lets start the hurt loop
-						if (_contamination == 0) then {
-						
-							//Let them know about their inevitable death before we hop into the loop (IF it's a player)
-							if (isPlayer _x) then {
-								(_MOPPLevel call CBRN_fnc_getContaminationMessage) remoteExec ["hint", _x]
-								
-							//And if it's not a play than force them to react accordingly.
-							} else {
-								if (((group _x) getVariable ["CBRN_alertness", 0]) == 0) then {[_x, 1] call CBRN_fnc_reactToChemicals};
-							};
-							
-							_x call CBRN_fnc_startChemicalDamageLoop;
-						};
-					};
-				};
-			} forEach list _this;
-		};
-		
-		//Now we remove from its lifetime
-		if (_lifetime != -1) then {_lifetime = (_lifetime - 1)};
-	};
-	
-	//Remove the area from the master list and than delete the area
-	CBRN_var_contaminatedAreas deleteAt (_this getVariable ["CBRN_index", -1]);
-	deleteVehicle _this;
-});
-*/
 _nil = [{
 	private _area = (_this select 0);
 	
@@ -122,8 +72,8 @@ _nil = [{
 						//If we are not maxed out on contamination than add some
 						if (_contamination < 1) then {_x setVariable ["CBRN_contaminationLevel", (_contamination + _lethality) min 1]};
 						
-						//If its our first time being contaminated than lets start the hurt loop
-						if (_contamination == 0) then {
+						//If our unit doesn't have a CDH then lets start one
+						if ((_x getVariable ["CBRN_chemicalDamageHandler", -1]) == -1) then {
 						
 							//Let them know about their inevitable death before we hop into the loop (IF it's a player)
 							if (isPlayer _x) then {
@@ -134,7 +84,7 @@ _nil = [{
 								if (((group _x) getVariable ["CBRN_alertness", 0]) == 0) then {[_x, 1] call CBRN_fnc_reactToChemicals};
 							};
 							
-							_x call CBRN_fnc_startChemicalDamageLoop;
+							_x call CBRN_fnc_addChemicalDamageHandler;
 						};
 					};
 				};
