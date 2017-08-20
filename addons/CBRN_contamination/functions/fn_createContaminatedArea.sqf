@@ -48,7 +48,9 @@ _area setVariable ["CBRN_MOPP", _MOPP];
 _area setVariable ["CBRN_index", CBRN_var_contaminatedAreas pushback _area];
 
 //Lets see if sober me ever finds this comment lol
+//I did
 
+/*
 _nil = (_area spawn {
 	private _MOPPLevel = (_this getVariable ["CBRN_MOPP", 0]);
 	private _lethality = (_this getVariable ["CBRN_lethality", 0]);
@@ -97,5 +99,66 @@ _nil = (_area spawn {
 	CBRN_var_contaminatedAreas deleteAt (_this getVariable ["CBRN_index", -1]);
 	deleteVehicle _this;
 });
+*/
+_nil = [{
+	private _area = (_this select 0);
+	
+	//Check to make sure our area still exists
+	if (!(isNil "_area") && !(isNull _area)) then {
+		private _MOPPLevel = (_area getVariable ["CBRN_MOPP", 0]);
+		private _lethality = (_area getVariable ["CBRN_lethality", 0]);
+		private _lifetime = (_area getVariable ["CBRN_lifetime", 0]);
+		
+		//Now we cylce through all objects inside the area
+		{
+			//Filter out any non-unit objects and dead objects
+			if ((_x isKindOf "CAManBase") && !(_x isKindOf "VirtualMan_F")) then {
+				if (alive _x) then {
+					//Check the units MOPP level
+					if ((_x call CBRN_fnc_getMOPPLevel) < _MOPPLevel) then {
+						//Get the units contamination level so we can make sure it is up to date
+						private _contamination = (_x getVariable ["CBRN_contaminationLevel", 0]);
+						
+						//If we are not maxed out on contamination than add some
+						if (_contamination < 1) then {_x setVariable ["CBRN_contaminationLevel", (_contamination + _lethality) min 1]};
+						
+						//If its our first time being contaminated than lets start the hurt loop
+						if (_contamination == 0) then {
+						
+							//Let them know about their inevitable death before we hop into the loop (IF it's a player)
+							if (isPlayer _x) then {
+								(_MOPPLevel call CBRN_fnc_getContaminationMessage) remoteExecCall ["hint", _x]
+								
+							//And if it's not a play than force them to react accordingly.
+							} else {
+								if (((group _x) getVariable ["CBRN_alertness", 0]) == 0) then {[_x, 1] call CBRN_fnc_reactToChemicals};
+							};
+							
+							_x call CBRN_fnc_startChemicalDamageLoop;
+						};
+					};
+				};
+			};
+			
+		} forEach list _area;
+		
+		//Tick down the life of our area
+		if (_lifetime != -1) then {
+			_lifetime = (_lifetime - 1);
+			
+			_area setVariable ["CBRN_lifetime", _lifetime];
+		};
+		
+		//If our area has run out of life, then delete it and remove it from the index
+		if (_lifetime == 0) then {
+			CBRN_var_contaminatedAreas deleteAt (_area getVariable ["CBRN_index", -1]);
+			deleteVehicle _area;
+		};
+		
+	//If our area does not exist than we can remove the handle for this function and let it die
+	} else {
+		(_this select 1) call CBA_fnc_removePerFrameHandler;
+	};
+}, 1, _area] call CBA_fnc_addPerFrameHandler;
 
 _area;
