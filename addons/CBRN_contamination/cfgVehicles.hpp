@@ -6,7 +6,7 @@ class CfgVehicles {
 		{
 			class CBRN_Contamination
 			{
-				respawn = "(_this select 0) setVariable ['CBRN_contaminationLevel', 0];(_this select 0) setVariable ['CBRN_chemicalDamage', 0];";
+				respawn = "(_this select 0) setVariable ['CBRN_contaminationLevel', 0];(_this select 0) setVariable ['CBRN_chemicalDamage', 0];(_this select 0) setVariable ['CBRN_chemicalDamageHandler', -1];";
 			};
 		};
 	};
