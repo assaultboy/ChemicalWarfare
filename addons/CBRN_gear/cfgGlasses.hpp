@@ -49,4 +49,28 @@ class cfgGlasses
 		picture = "\CBRN_data\ui\items\maskS10.paa";
 		ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa";
 	};
+		class gm_ge_facewear_m65: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+		CBRN_protection = 1; 
+	};
+			class gm_gc_army_facewear_schm41m: none
+	{
+ 
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+		CBRN_protection = 1; 
+	};
 };

@@ -62,6 +62,16 @@ class CBRN_Module_GiveMasks: CBRN_Module_Base
 					name = "S10";
 					value = "G_CBRN_S10";
 				};
+								class s11
+				{
+					name = "m65 w German";
+					value = "gm_ge_facewear_m65";
+				};
+								class s12
+				{
+					name = "SchM-41M";
+					value = "gm_gc_army_facewear_schm41m";
+				};
 			};
 		};
 	};
