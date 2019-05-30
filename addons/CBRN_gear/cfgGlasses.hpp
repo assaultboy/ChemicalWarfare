@@ -66,7 +66,7 @@ class cfgGlasses
  
 		identityTypes[] = {}; 
 
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
+		ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa"; 
 		
 		ACE_Resistance = 2; 
 		ACE_Protection = 1; 
