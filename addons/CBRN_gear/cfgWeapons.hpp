@@ -63,7 +63,7 @@ class cfgWeapons
 	class U_B_CombatUniform_mcam;
 	class U_O_CombatUniform_ocamo;
 	class U_I_CombatUniform;
-	class U_B_CTRG_Soldier_F
+	class U_B_CTRG_Soldier_F;
 	class UniformItem;
 
 	
@@ -82,7 +82,7 @@ class cfgWeapons
             uniformModel = "-";
             uniformClass = "B_CBRN_Unarmed";
             containerClass = Supply40;
-            mass = 40;
+            mass = 80;
         };
 	};
 	
@@ -101,7 +101,7 @@ class cfgWeapons
             uniformModel = "-";
             uniformClass = "O_CBRN_Unarmed";
             containerClass = Supply40;
-            mass = 40;
+            mass = 80;
         };
 	};
 	
@@ -120,26 +120,22 @@ class cfgWeapons
             uniformModel = "-";
             uniformClass = "I_CBRN_Unarmed";
             containerClass = Supply40;
-            mass = 40;
+            mass = 80;
         };
 	};
-		class U_B_CBRNCTRG: U_B_CTRG_Soldier_F {
+		class U_B_CBRN_CTRG: U_B_CTRG_Soldier_F {
 		author = "The M";
         scope = 2;
         displayName = "CTRG Stealth Uniform (CBRN)";
-		picture = "\A3\characters_f_exp\data\ui\icon_U_BT_Soldier_F_tna_ca.paa";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\BLUFOR\Data\U_BT_Soldier_F_tna_co.paa"};
 
-		
 		CBRN_protection = 1;
  
         class ItemInfo: UniformItem
         {
             uniformModel = "-";
-            uniformClass = "B_CBRNCTRG";
+            uniformClass = "B_CBRN_CTRG_Unarmed";
             containerClass = Supply40;
-            mass = 40;
+            mass = 80;
         };
 	};
 };

@@ -24,3 +24,29 @@ class B_CBRN_Unarmed: B_Soldier_unarmed_F
 		};
 	};
 };
+
+class B_CBRN_CTRG_Unarmed: B_Soldier_unarmed_F
+{
+	scope = 1;
+	editorSubcategory = "CBRN";
+	
+	//editorPreview = "\bonusUnits_CSF\editorPreviews\O_CSF_Unarmed.jpg";
+	author = "The_M";
+	
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\BLUFOR\Data\U_B_CTRG_Soldier_F_co.paa"};
+	
+	modelSides[] = {0, 1, 2, 3};
+	
+	model = "\A3\Characters_F_Exp\BLUFOR\B_CTRG_Soldier_01_F.p3d";
+	
+	uniformClass = "U_B_CBRN_CTRG";
+	
+	class EventHandlers
+	{
+		class CBRN_giveMask
+		{
+			init = "(_this select 0) addItem 'G_CBRN_M04_Hood'";
+		};
+	};
+};
