@@ -94,6 +94,7 @@ if ((_this getVariable ["CBRN_chemicalDamageHandler", -1]) == -1) then {
 		//Since we have no contamination or damage, we can remove the PFH and undo side effects
 		} else {
 			_handle call CBA_fnc_removePerFrameHandler;
+			_unit setVariable ['CBRN_chemicalDamageHandler', -1, 2];
 			
 			//Let them do things again (If we took it away when ACE was enabled)
 			//We know this is fine because we are at a point where contamination and damage are both 0
