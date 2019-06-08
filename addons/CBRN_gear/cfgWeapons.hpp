@@ -171,5 +171,302 @@ class cfgWeapons
             mass = 80;
         };
 	};
+		class U_B_CBRN_CTRG_GER_S_Arid: U_B_CTRG_Soldier_F {
+		author = "The M/IndeedPete";
+        scope = 2;
+        displayName = "CTRG Stealth Uniform GER (arid)";
+		picture = "\CBRN_gear\ui\icons\icon_u_ia_soldier_01_clothing_CTRG_GER_arid_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing1_CTRG_GER_arid_co.paa"};
+		
+
+ 
+        class ItemInfo: UniformItem
+        {
+            uniformModel = "-";
+            uniformClass = "B_CBRN_CTRG_GER_S_Arid_Unarmed";
+            containerClass = Supply40;
+            mass = 40;
+        };
+	};
+		class U_B_CBRN_CTRG_GER_S_Arid_CBRN: U_B_CTRG_Soldier_F {
+		author = "The M/IndeedPete";
+        scope = 2;
+        displayName = "CTRG Stealth Uniform GER (arid) (CBRN)";
+		picture = "\CBRN_gear\ui\icons\icon_u_ia_soldier_01_clothing_CTRG_GER_arid_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing1_CTRG_GER_arid_co.paa"};
+		
+
+		CBRN_protection = 1;
+ 
+        class ItemInfo: UniformItem
+        {
+            uniformModel = "-";
+            uniformClass = "B_CBRN_CTRG_GER_S_Arid_CBRN_Unarmed";
+            containerClass = Supply40;
+            mass = 80;
+        };
+	};
+		class U_B_CBRN_CTRG_GER_S_Tropic: U_B_CTRG_Soldier_F {
+		author = "The M/IndeedPete";
+        scope = 2;
+        displayName = "CTRG Stealth Uniform GER (tropic)";
+		picture = "\CBRN_gear\ui\icons\icon_u_ia_soldier_01_clothing_CTRG_GER_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing1_CTRG_GER_tropic_co.paa"};
+		
+
+ 
+        class ItemInfo: UniformItem
+        {
+            uniformModel = "-";
+            uniformClass = "B_CBRN_CTRG_GER_S_Tropic_Unarmed";
+            containerClass = Supply40;
+            mass = 40;
+        };
+	};
+		class U_B_CBRN_CTRG_GER_S_Tropic_CBRN: U_B_CTRG_Soldier_F {
+		author = "The M/IndeedPete";
+        scope = 2;
+        displayName = "CTRG Stealth Uniform GER (tropic) (CBRN)";
+		picture = "\CBRN_gear\ui\icons\icon_u_ia_soldier_01_clothing_CTRG_GER_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing1_CTRG_GER_tropic_co.paa"};
+
+		CBRN_protection = 1;
+ 
+        class ItemInfo: UniformItem
+        {
+            uniformModel = "-";
+            uniformClass = "B_CBRN_CTRG_GER_S_tropic_CBRN_Unarmed";
+            containerClass = Supply40;
+            mass = 80;
+        };
+	};
+	
+	
+	//Vests----------------------------------------
+	class V_PlateCarrierH_CTRG;
+	class V_PlateCarrierL_CTRG;
+	class V_Chestrig_rgr;
+	class Vest_Camo_Base;
+	class VestItem;
+	
+	
+    class U_B_CBRN_CTRG_GER_S_Tropic_Vest_2: V_PlateCarrierH_CTRG
+    {
+
+        scope = 2;
+		displayName = "CTRG Plate Carrier Rig Mk2 GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_2_CTRG_GER_tropic_ca.paa";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\vests_CTRG_GER_tropic_co.paa"};
+
+        class ItemInfo: VestItem {
+
+
+
+            uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest01";
+
+            containerClass = "Supply140";
+
+            mass = 80;
+
+            hiddenSelections[] = {"camo"};
+            class HitpointsProtectionInfo {
+                class Chest {
+                    HitpointName = "HitChest";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Diaphragm {
+                    HitpointName = "HitDiaphragm";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 35;
+                    passThrough = 0.2;
+                };
+
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.2;
+                };
+            };
+        };
+
+    };	
+    class U_B_CBRN_CTRG_GER_S_Tropic_Vest_1: V_PlateCarrierL_CTRG
+    {
+
+        scope = 2;
+		displayName = "CTRG Plate Carrier Rig Mk1 GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_1_CTRG_GER_tropic_ca.paa";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\vests_CTRG_GER_tropic_co.paa"};
+
+        class ItemInfo: VestItem {
+
+
+
+            uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest02";
+
+            containerClass = "Supply140";
+
+            mass = 80;
+
+            hiddenSelections[] = {"camo"};
+            class HitpointsProtectionInfo {
+                class Chest {
+                    HitpointName = "HitChest";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Diaphragm {
+                    HitpointName = "HitDiaphragm";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 35;
+                    passThrough = 0.2;
+                };
+
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.2;
+                };
+            };
+        };
+
+    };
+    class U_B_CBRN_CTRG_GER_S_Arid_Vest_2: V_PlateCarrierH_CTRG
+    {
+
+        scope = 2;
+		displayName = "CTRG Plate Carrier Rig Mk2 GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_2_CTRG_GER_arid_ca.paa";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\vests_CTRG_GER_arid_co.paa"};
+
+        class ItemInfo: VestItem {
+
+
+
+            uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest01";
+
+            containerClass = "Supply140";
+
+            mass = 80;
+
+            hiddenSelections[] = {"camo"};
+            class HitpointsProtectionInfo {
+                class Chest {
+                    HitpointName = "HitChest";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Diaphragm {
+                    HitpointName = "HitDiaphragm";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 35;
+                    passThrough = 0.2;
+                };
+
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.2;
+                };
+            };
+        };
+
+    };	
+    class U_B_CBRN_CTRG_GER_S_Arid_Vest_1: V_PlateCarrierL_CTRG
+    {
+
+        scope = 2;
+		displayName = "CTRG Plate Carrier Rig Mk1 GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_1_CTRG_GER_arid_ca.paa";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\vests_CTRG_GER_arid_co.paa"};
+
+        class ItemInfo: VestItem {
+
+
+
+            uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest02";
+
+            containerClass = "Supply140";
+
+            mass = 80;
+
+            hiddenSelections[] = {"camo"};
+            class HitpointsProtectionInfo {
+                class Chest {
+                    HitpointName = "HitChest";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Diaphragm {
+                    HitpointName = "HitDiaphragm";
+                    armor = 35;
+                    PassThrough = 0.2;
+                };
+
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 35;
+                    passThrough = 0.2;
+                };
+
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.2;
+                };
+            };
+        };
+
+    };	
+    class U_B_CBRN_CTRG_GER_S_Tropic_chestrig: V_Chestrig_rgr
+    {
+
+        scope = 2;
+		displayName = "CTRG Chestrig GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_FChestrig_CTRG_GER_tropic_CA.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip_chestrig_CTRG_GER_tropic_co.paa","\CBRN_gear\data\armor1_CTRG_GER_tropic_co.paa"};
+
+    };	
+    class U_B_CBRN_CTRG_GER_S_Arid_Vest: V_Chestrig_rgr
+    {
+
+        scope = 2;
+		displayName = "CTRG Chestrig GER (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_FChestrig_CTRG_GER_arid_CA.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip_chestrig_CTRG_GER_arid_co.paa","\CBRN_gear\data\armor1_CTRG_GER_tropic_co.paa"};
+
+    };	
 };
 

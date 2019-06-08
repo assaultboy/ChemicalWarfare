@@ -55,6 +55,18 @@ class CfgVehicles {
                 count = 1;  }         
         };
     };
-	
-	
+	   class CTRG_GER_: Item_Base_F {
+        author = "The_M";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Sample 3";
+        vehicleClass = "Items";
+		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\MedicalGarbage_01_Injector_F.jpg";
+        class TransportItems { 
+				class CBRN_Sample_3 {
+			    name = CBRN_Sample_3;
+                count = 1;  }         
+        };
+    };	
+
 };

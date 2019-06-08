@@ -1,4 +1,4 @@
-name = "CBRN Mod";
+name = "ASO_CBRN";
 tooltipOwned = "Tool Tip";
 overview = "This addon adds Chemical, Biological, Radiological, and Nuclear warfare.";
 
