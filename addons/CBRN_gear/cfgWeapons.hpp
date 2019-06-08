@@ -250,11 +250,13 @@ class cfgWeapons
 	class V_PlateCarrierH_CTRG;
 	class V_PlateCarrierL_CTRG;
 	class V_Chestrig_rgr;
+	class V_HarnessO_gry;
+	class V_HarnessOGL_gry;
 	class Vest_Camo_Base;
 	class VestItem;
 	
 	
-    class U_B_CBRN_CTRG_GER_S_Tropic_Vest_2: V_PlateCarrierH_CTRG
+    class U_B_CBRN_CTRG_GER_Tropic_Vest_2: V_PlateCarrierH_CTRG
     {
 
         scope = 2;
@@ -302,7 +304,7 @@ class cfgWeapons
         };
 
     };	
-    class U_B_CBRN_CTRG_GER_S_Tropic_Vest_1: V_PlateCarrierL_CTRG
+    class U_B_CBRN_CTRG_GER_Tropic_Vest_1: V_PlateCarrierL_CTRG
     {
 
         scope = 2;
@@ -350,11 +352,11 @@ class cfgWeapons
         };
 
     };
-    class U_B_CBRN_CTRG_GER_S_Arid_Vest_2: V_PlateCarrierH_CTRG
+    class U_B_CBRN_CTRG_GER_Arid_Vest_2: V_PlateCarrierH_CTRG
     {
 
         scope = 2;
-		displayName = "CTRG Plate Carrier Rig Mk2 GER (tropic)";
+		displayName = "CTRG Plate Carrier Rig Mk2 GER (arid)";
         author = "The M/IndeedPeten";
         picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_2_CTRG_GER_arid_ca.paa";
         hiddenSelections[] = {"camo"};
@@ -398,11 +400,11 @@ class cfgWeapons
         };
 
     };	
-    class U_B_CBRN_CTRG_GER_S_Arid_Vest_1: V_PlateCarrierL_CTRG
+    class U_B_CBRN_CTRG_GER_Arid_Vest_1: V_PlateCarrierL_CTRG
     {
 
         scope = 2;
-		displayName = "CTRG Plate Carrier Rig Mk1 GER (tropic)";
+		displayName = "CTRG Plate Carrier Rig Mk1 GER (arid)";
         author = "The M/IndeedPeten";
         picture = "\CBRN_gear\ui\icons\icon_v_plate_carrier_1_CTRG_GER_arid_ca.paa";
         hiddenSelections[] = {"camo"};
@@ -446,27 +448,142 @@ class cfgWeapons
         };
 
     };	
-    class U_B_CBRN_CTRG_GER_S_Tropic_chestrig: V_Chestrig_rgr
+    class U_B_CBRN_CTRG_GER_Tropic_chestrig: V_Chestrig_rgr
     {
 
         scope = 2;
-		displayName = "CTRG Chestrig GER (tropic)";
+		displayName = "Chestrig CTRG GER (tropic)";
         author = "The M/IndeedPeten";
-        picture = "\CBRN_gear\ui\icons\icon_V_FChestrig_CTRG_GER_tropic_CA.paa";
+        picture = "\CBRN_gear\ui\icons\icon_V_F_Chestrig_CTRG_GER_tropic_CA.paa";
         hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip_chestrig_CTRG_GER_tropic_co.paa","\CBRN_gear\data\armor1_CTRG_GER_tropic_co.paa"};
 
     };	
-    class U_B_CBRN_CTRG_GER_S_Arid_Vest: V_Chestrig_rgr
+    class U_B_CBRN_CTRG_GER_Arid_Vest: V_Chestrig_rgr
     {
 
         scope = 2;
-		displayName = "CTRG Chestrig GER (arid)";
+		displayName = "Chestrig CTRG GER (arid)";
         author = "The M/IndeedPeten";
-        picture = "\CBRN_gear\ui\icons\icon_V_FChestrig_CTRG_GER_arid_CA.paa";
+        picture = "\CBRN_gear\ui\icons\icon_V_F_Chestrig_CTRG_GER_arid_CA.paa";
         hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip_chestrig_CTRG_GER_arid_co.paa","\CBRN_gear\data\armor1_CTRG_GER_tropic_co.paa"};
 
     };	
-};
+	class U_B_CBRN_CTRG_GER_Arid_Harness: V_HarnessO_gry
+    {
 
+        scope = 2;
+		displayName = "LBV Harness CTRG GER (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_HarnessO_CTRG_GER_arid_CA.paa";
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing_CTRG_GER_arid_co.paa","\CBRN_gear\data\tech_CTRG_GER_arid_co.paa"};
+
+    };	
+	class U_B_CBRN_CTRG_GER_Tropic_Harness: V_HarnessO_gry
+    {
+
+        scope = 2;
+		displayName = "LBV Harness CTRG GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_HarnessO_CTRG_GER_tropic_CA.paa";
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing_CTRG_GER_tropic_co.paa","\CBRN_gear\data\tech_CTRG_GER_tropic_co.paa"};
+
+    };	
+	class U_B_CBRN_CTRG_GER_Arid_Harness_GL: V_HarnessOGL_gry
+    {
+
+        scope = 2;
+		displayName = "LBV Harness GL CTRG GER (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_HarnessO_CTRG_GER_arid_CA.paa";
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing_CTRG_GER_arid_co.paa","\CBRN_gear\data\tech_CTRG_GER_arid_co.paa"};
+
+    };	
+	class U_B_CBRN_CTRG_GER_Tropic_Harness_GL: V_HarnessOGL_gry
+    {
+
+        scope = 2;
+		displayName = "LBV Harness GL CTRG GER (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_V_HarnessO_CTRG_GER_tropic_CA.paa";
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\clothing_CTRG_GER_tropic_co.paa","\CBRN_gear\data\tech_CTRG_GER_tropic_co.paa"};
+
+    };
+	
+	//Vests----------------------------------------
+	class H_HelmetB;
+	class H_HelmetB_light;
+	class H_HelmetSpecB;
+	
+	class U_B_CBRN_CTRG_GER_Tropic_H_HelmetB: H_HelmetB
+    {
+
+        scope = 2;
+		displayName = "Combat Helmet CTRG (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmet_plain_CTRG_GER_tropic_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_tropic_co.paa"};
+
+    };
+	class U_B_CBRN_CTRG_GER_Arid_H_HelmetB: H_HelmetB
+    {
+
+        scope = 2;
+		displayName = "Combat Helmet CTRG (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmet_plain_CTRG_GER_arid_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_arid_co.paa"};
+
+    };
+	class U_B_CBRN_CTRG_GER_Tropic_H_HelmetB_light: H_HelmetB_light
+    {
+
+        scope = 2;
+		displayName = "Light Combat Helmet CTRG (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmetspecb_CTRG_GER_tropic_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_tropic_co.paa"};
+
+    };
+	class U_B_CBRN_CTRG_GER_Arid_H_HelmetB_light: H_HelmetB_light
+    {
+
+        scope = 2;
+		displayName = "Light Combat Helmet CTRG (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmetspecb_CTRG_GER_arid_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_arid_co.paa"};
+
+    };
+	class U_B_CBRN_CTRG_GER_Tropic_H_HelmetSpecB: H_HelmetSpecB
+    {
+
+        scope = 2;
+		displayName = "Enhanced Combat Helmet CTRG (tropic)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmetspecb_CTRG_GER_tropic_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_tropic_co.paa"};
+
+    };
+	class U_B_CBRN_CTRG_GER_Arid_H_HelmetSpecB: H_HelmetSpecB
+    {
+
+        scope = 2;
+		displayName = "Enhanced Combat Helmet CTRG (arid)";
+        author = "The M/IndeedPeten";
+        picture = "\CBRN_gear\ui\icons\icon_h_helmetspecb_CTRG_GER_arid_ca.paa";
+        hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_arid_co.paa"};
+
+    };
+};	

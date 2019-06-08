@@ -1,6 +1,10 @@
 class cfgGlasses
 {
 	class None;
+	class G_Balaclava_TI_G_blk_F;
+	class G_Balaclava_TI_blk_F;
+	
+	
 	class G_CBRN_M50: None
 	{
 		author = "Assaultboy"; //Obvious
@@ -49,7 +53,7 @@ class cfgGlasses
 		picture = "\CBRN_data\ui\items\maskS10.paa";
 		ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa";
 	};
-		class gm_ge_facewear_m65: none
+	class gm_ge_facewear_m65: none
 	{
 
 		identityTypes[] = {}; 
@@ -61,7 +65,7 @@ class cfgGlasses
 
 		CBRN_protection = 1; 
 	};
-			class gm_gc_army_facewear_schm41m: none
+	class gm_gc_army_facewear_schm41m: none
 	{
  
 		identityTypes[] = {}; 
@@ -72,5 +76,58 @@ class cfgGlasses
 		ACE_Protection = 1; 
 
 		CBRN_protection = 1; 
+	}
+	
+	class G_CTRG_GER_tropic_Balaclava: G_Balaclava_TI_blk_F
+	{
+		displayName = "Stealth Balaclava CTRG (tropic)";
+        picture = "\CBRN_gear\ui\icons\icon_G_Balaclava_TI_CTRG_GER_Tropic_F_ca.paa"; 
+		identityTypes[] = {}; 
+		hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\G_Balaclava_TI_CTRG_GER_Tropic_F_co.paa"};
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 0; 
+
+ 
+	};
+		class G_CTRG_GER_arid_Balaclava: G_Balaclava_TI_blk_F
+	{
+		displayName = "Stealth Balaclava CTRG (arid)";
+        picture = "\CBRN_gear\ui\icons\icon_G_Balaclava_TI_CTRG_GER_Arid_F_ca.paa";
+		identityTypes[] = {}; 
+		hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\CBRN_gear\data\G_Balaclava_TI_CTRG_GER_Arid_F_co.paa"};
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 0; 
+
+ 
+	};
+	class G_CTRG_GER_tropic_Balaclava_G: G_Balaclava_TI_G_blk_F
+	{
+		displayName = "Stealth Balaclava CTRG (tropic, Goggles)";
+        picture = "\CBRN_gear\ui\icons\icon_G_Balaclava_TI_CTRG_GER_Tropic_F_ca.paa"; 
+		identityTypes[] = {}; 
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\G_Balaclava_TI_CTRG_GER_Tropic_F_co.paa","\A3\Characters_F\Heads\Glasses\data\g_combat_ca.paa"};
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+ 
+	};
+	class G_CTRG_GER_arid_Balaclava_G: G_Balaclava_TI_G_blk_F
+	{
+		displayName = "Stealth Balaclava CTRG (arid, Goggles)";
+        picture = "\CBRN_gear\ui\icons\icon_G_Balaclava_TI_CTRG_GER_Arid_F_ca.paa"; 
+		identityTypes[] = {}; 
+        hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\CBRN_gear\data\G_Balaclava_TI_CTRG_GER_Arid_F_co.paa","\A3\Characters_F\Heads\Glasses\data\g_combat_ca.paa"};
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+ 
 	};
 };
