@@ -78,6 +78,17 @@ class cfgWeapons
 		picture = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\MedicalGarbage_01_Injector_F.jpg"; 
     };
 	
+			class CBRN_Sample_4: CBRN_itemBase {
+        author = "The_M";
+        scope = 2;
+		ace_arsenal_hide = 1
+        scopeCurator = 2;
+        displayName = "Sample 4"
+		model = "a3\Props_F_Orange\Humanitarian\Garbage\MedicalGarbage_01_Injector_F";
+		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\MedicalGarbage_01_Injector_F.jpg";
+		picture = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\MedicalGarbage_01_Injector_F.jpg"; 
+    };
+	
 	class GrenadeLauncher;
 	class Throw: GrenadeLauncher {
 		muzzles[] += {"CBRN_Grenade_SMuzzle", "CBRN_Grenade_NMuzzle"};
