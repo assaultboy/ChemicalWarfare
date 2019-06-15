@@ -597,4 +597,162 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"\CBRN_gear\data\equip1_CTRG_GER_arid_co.paa"};
 
     };
+	//Weapons----------------------------------------
+	class MMG_01_base_F;
+	class U_B_CBRN_CTRG_GER_MMG_01: MMG_01_base_F
+    {
+	BaseWeapon = U_B_CBRN_CTRG_GER_MMG_01;
+	modes[] = {"manual", "burst"};
+	class manual {
+		class BaseSoundModeType {
+			closure1[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_01", 0.630957, 1, 10};
+			closure2[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_02", 0.630957, 1, 10};
+			closure3[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_03", 0.630957, 1, 10};
+			soundClosure[] = {"closure1", 0.33, "closure2", 0.33, "closure3", 0.34};
+		};
+		class StandardSound: BaseSoundModeType {
+			soundSetShot[] = {"MMG01_Shot_SoundSet", "MMG01_Tail_SoundSet", "MMG01_InteriorTail_SoundSet"};
+			begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_short_01", 1.58489, 1, 1200};
+			begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_short_02", 1.58489, 1, 1200};
+			begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_short_03", 1.58489, 1, 1200};
+			soundBegin[] = {"begin1", 0.33, "begin2", 0.33, "begin3", 0.34};
+			class SoundTails {
+				class TailInterior {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_tail_interior", 1.41254, 1, 1200};
+					frequency = 1;
+					volume = "interior";
+				};
+				class TailForest {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_tail_forest", 1, 1, 1200};
+					frequency = 1;
+					volume = "(1-interior/1.4)*forest";
+				};
+				class TailHouses {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_tail_houses", 1, 1, 1200};
+					frequency = 1;
+					volume = "(1-interior/1.4)*houses";
+				};
+				class TailMeadows {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_tail_meadows", 1, 1, 1200};
+					frequency = 1;
+					volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+				};
+				class TailTrees {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_tail_trees", 1, 1, 1200};
+					frequency = 1;
+					volume = "(1-interior/1.4)*trees";
+				};
+			};
+			// BaseSoundModeType
+			closure1[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_01", 0.630957, 1, 10};
+			closure2[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_02", 0.630957, 1, 10};
+			closure3[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_03", 0.630957, 1, 10};
+			soundClosure[] = {"closure1", 0.33, "closure2", 0.33, "closure3", 0.34};
+		};
+		class SilencedSound: BaseSoundModeType {
+			SoundSetShot[] = {"MMG01_silencerShot_SoundSet", "MMG01_silencerTail_SoundSet", "MMG01_silencerInteriorTail_SoundSet"};
+			begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_short_01", 1.58489, 1, 400};
+			begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_short_02", 1.58489, 1, 400};
+			begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_short_03", 1.58489, 1, 400};
+			soundBegin[] = {"begin1", 0.33, "begin2", 0.33, "begin3", 0.34};
+			class SoundTails {
+				class TailInterior {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_tail_interior", 1.41254, 1, 400};
+					frequency = 1;
+					volume = "interior";
+				};
+				class TailForest {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_tail_forest", 1, 1, 400};
+					frequency = 1;
+					volume = "(1-interior/1.4)*forest";
+				};
+				class TailHouses {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_tail_houses", 1, 1, 400};
+					frequency = 1;
+					volume = "(1-interior/1.4)*houses";
+				};
+				class TailMeadows {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_tail_meadows", 1, 1, 400};
+					frequency = 1;
+					volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+				};
+				class TailTrees {
+					sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\silencer_MMG_01_tail_trees", 1, 1, 400};
+					frequency = 1;
+					volume = "(1-interior/1.4)*trees";
+				};
+			};
+			// BaseSoundModeType
+			closure1[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_01", 0.630957, 1, 10};
+			closure2[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_02", 0.630957, 1, 10};
+			closure3[] = {"A3\Sounds_F_Mark\arsenal\weapons\Machineguns\MMG_01_Navid\MMG_01_Closure_03", 0.630957, 1, 10};
+			soundClosure[] = {"closure1", 0.33, "closure2", 0.33, "closure3", 0.34};
+		};
+		sounds[] = {"StandardSound", "SilencedSound"};
+		reloadTime = 0.085;
+		dispersion = 0.0008727;
+		soundContinuous = 0;
+		soundBurst = 0;
+		// Mode_FullAuto
+		sound[] = {"", 10, 1};
+		soundEnd[] = {"sound", 1};
+		autoFire = 1;
+		minRange = 1;
+		minRangeProbab = 0.2;
+		midRange = 30;
+		midRangeProbab = 0.58;
+		maxRange = 80;
+		maxRangeProbab = 0.04;
+		displayName = "Full";
+		textureType = "fullAuto";
+		recoil = "recoil_auto_mx"; 
+		recoilProne = "recoil_auto_prone_mx";
+		aiDispersionCoefY = 3;
+		aiDispersionCoefX = 2;
+		// Mode_SemiAuto
+		multiplier = 1;
+		burst = 1;
+		burstRangeMax = -1;
+		soundBegin[] = {"sound", 1};
+		soundBeginWater[] = {"sound", 1};
+		soundClosure[] = {"sound", 1};
+		soundLoop[] = {};
+		weaponSoundEffect = "";
+		ffCount = 1;
+		ffMagnitude = 0.5;
+		ffFrequency = 11;
+		flash = "gunfire";
+		flashSize = 0.1;
+		useAction = 0;
+		useActionTitle = "";
+		showToPlayer = 1;
+		artilleryDispersion = 1;
+		artilleryCharge = 1;
+		canShootInWater = 0;
+		requiredOpticType = -1;
+		aiRateOfFire = 2;
+		aiRateOfFireDispersion = 1;
+		aiRateOfFireDistance = 500;
+	};
+    scope = 2;
+	ace_arsenal_hide = 2
+	ace_overheating_mrbs = 3000;
+	ace_overheating_slowdownFactor = 1;
+	ace_overheating_dispersion = 0.75;
+    scopeCurator = 2;
+	ace_overheating_allowSwapBarrel = 1;
+	descriptionShort = "Medium Machine Gun<br />Caliber: 7.62x51 mm";
+	displayName = "HK121 MG 5";
+	dispersion = 0.00029;
+    author = "The M";
+    recoil = "recoil_sw";
+	recoilProne = "assaultRifleBase";
+	magazines[] = {"150Rnd_762x51_Box_Tracer"};
+	magazineWell[] = {"CBA_762x54R_LINKS"};
+	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_01_sand_CO.paa","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_02_sand_CO.paa","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_03_sand_CO.paa"};
+	hiddenSelectionsMaterials[] = {"\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_01_sand.rvmat","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_02_sand.rvmat","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_03_sand.rvmat"};
+
+
+    };
+	
 };	
