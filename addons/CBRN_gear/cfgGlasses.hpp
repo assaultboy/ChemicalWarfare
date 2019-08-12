@@ -65,6 +65,7 @@ class cfgGlasses
 
 		CBRN_protection = 1; 
 	};
+	
 	class gm_gc_army_facewear_schm41m: none
 	{
  
@@ -77,7 +78,31 @@ class cfgGlasses
 
 		CBRN_protection = 1; 
 	}
-	
+	class G_RegulatorMask_base_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+		CBRN_protection = 1; 
+	};
+	class G_AirPurifyingRespirator_01_base_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
+		
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+
+		CBRN_protection = 1; 
+	};
+
 	class G_CTRG_GER_tropic_Balaclava: G_Balaclava_TI_blk_F
 	{
 		displayName = "Stealth Balaclava CTRG (tropic)";

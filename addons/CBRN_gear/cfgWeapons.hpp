@@ -109,6 +109,8 @@ class cfgWeapons
 	class U_I_CombatUniform;
 	class U_B_CTRG_Soldier_F;
 	class UniformItem;
+	class Uniform_Base;
+	class None;
 
 	
 	class U_B_CBRN: U_B_CombatUniform_mcam {
@@ -129,7 +131,48 @@ class cfgWeapons
             mass = 80;
         };
 	};
+
+	class U_B_CBRN_Suit_01_Tropic_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
 	
+	class U_B_CBRN_Suit_01_MTP_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+	
+	class U_B_CBRN_Suit_01_Wdl_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+	
+	class U_I_CBRN_Suit_01_AAF_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+	
+	class U_C_CBRN_Suit_01_Blue_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+	class U_C_CBRN_Suit_01_White_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+		
 	class U_O_CBRN: U_O_CombatUniform_ocamo {
 		author = "Assaultboy";
         scope = 2;
