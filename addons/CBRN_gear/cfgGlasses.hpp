@@ -83,8 +83,7 @@ class cfgGlasses
 
 		identityTypes[] = {}; 
 
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
-		ace_arsenal_hide = 0
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
 		ACE_Resistance = 2; 
 		ACE_Protection = 1; 
 
@@ -95,14 +94,78 @@ class cfgGlasses
 
 		identityTypes[] = {}; 
 
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
-		ace_arsenal_hide = 0
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
 		ACE_Resistance = 2; 
 		ACE_Protection = 1; 
 
 		CBRN_protection = 1; 
 	};
+		class G_AirPurifyingRespirator_02_base_F: none
+	{
 
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+		CBRN_protection = 1; 
+	};
+	class G_AirPurifyingRespirator_01_nofilter_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		ace_arsenal_hide = -1;
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		CBRN_protection = 1; 
+	};
+	class G_AirPurifyingRespirator_02_black_nofilter_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		ace_arsenal_hide = -1;
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		CBRN_protection = 1; 
+	};
+	class G_AirPurifyingRespirator_02_olive_nofilter_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		ace_arsenal_hide = -1;
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		CBRN_protection = 1; 
+	};
+	class G_AirPurifyingRespirator_02_sand_nofilter_F: none
+	{
+
+		identityTypes[] = {}; 
+
+		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		ace_arsenal_hide = -1;
+		ACE_Resistance = 2; 
+		ACE_Protection = 1; 
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		CBRN_protection = 1; 
+	};
 	class G_CTRG_GER_tropic_Balaclava: G_Balaclava_TI_blk_F
 	{
 		displayName = "Stealth Balaclava CTRG (tropic)";
