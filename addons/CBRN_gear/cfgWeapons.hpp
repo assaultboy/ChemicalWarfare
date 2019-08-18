@@ -159,20 +159,28 @@ class cfgWeapons
  
 
 	};
-	
+
+	class U_I_E_CBRN_Suit_01_EAF_F: none {
+		
+		CBRN_protection = 1;
+ 
+
+	};
+
 	class U_C_CBRN_Suit_01_Blue_F: none {
 		
 		CBRN_protection = 1;
  
 
 	};
+	
 	class U_C_CBRN_Suit_01_White_F: none {
 		
 		CBRN_protection = 1;
  
 
 	};
-		
+
 	class U_O_CBRN: U_O_CombatUniform_ocamo {
 		author = "Assaultboy";
         scope = 2;
