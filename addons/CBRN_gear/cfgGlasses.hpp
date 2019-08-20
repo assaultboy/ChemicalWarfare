@@ -77,13 +77,13 @@ class cfgGlasses
 		ACE_Protection = 1; 
 
 		CBRN_protection = 1; 
-	}
+	};
+	
 	class G_RegulatorMask_base_F: none
 	{
 
 		identityTypes[] = {}; 
 
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
 		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; 
 		
 		ACE_Resistance = 2; 
@@ -95,7 +95,7 @@ class cfgGlasses
 	{
 
 		identityTypes[] = {}; 
-D
+
 		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
 		ACE_Resistance = 2; 
 		ACE_Protection = 1; 

@@ -650,9 +650,199 @@ class cfgWeapons
     };
 	//Weapons----------------------------------------
 	class MMG_01_base_F;
+	class MuzzleSlot;
+	class CowsSlot;
+	class PointerSlot;
+	class UnderBarrelSlot;
+	
+	
 	class U_B_CBRN_CTRG_GER_MMG_01: MMG_01_base_F
     {
 	BaseWeapon = U_B_CBRN_CTRG_GER_MMG_01;
+	class WeaponSlotsInfo: none {
+		class MuzzleSlot: MuzzleSlot {
+			linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+			compatibleItems[] = {"muzzle_snds_93mmg", "muzzle_snds_93mmg_tan"};
+			iconPosition[] = {0.06, 0.4};
+			iconScale = 0.15;
+			displayName = "$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+			iconPicture = "\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+			iconPinpoint = "Center";
+			// SlotInfo
+			access = 1;
+			scope = 0;
+		};
+		class CowsSlot: CowsSlot {
+			iconPosition[] = {0.57, 0.28};
+			iconScale = 0.15;
+			compatibleItems[] = {
+			"optic_Nightstalker",
+			"optic_tws", 
+			"optic_tws_mg", 
+			"optic_NVS", 
+			"optic_DMS", 
+			"optic_LRPS", 
+			"optic_ams", 
+			"optic_AMS_snd", 
+			"optic_AMS_khk", 
+			"optic_KHS_blk", 
+			"optic_KHS_tan", 
+			"optic_KHS_hex", 
+			"optic_KHS_old", 
+			"optic_SOS", 
+			"optic_MRCO", 
+			"optic_Arco", 
+			"optic_aco", 
+			"optic_ACO_grn", 
+			"optic_aco_smg", 
+			"optic_ACO_grn_smg", 
+			"optic_hamr", 
+			"optic_Holosight", 
+			"optic_Holosight_smg", 
+			"optic_Hamr_khk_F", 
+			"optic_SOS_khk_F", 
+			"optic_Arco_ghex_F", 
+			"rhsusf_acc_ELCAN_ard_PIP", 
+			"rhsusf_acc_ELCAN_PIP", 
+			"rhsusf_acc_ELCAN_ard_3d", 
+			"rhsusf_acc_ELCAN_3d", 
+			"rhsusf_acc_ELCAN_ard", 
+			"rhsusf_acc_ELCAN", 
+			"rhsusf_acc_SpecterDR", 
+			"rhsusf_acc_SpecterDR_3d", 
+			"rhsusf_acc_SpecterDR_A", 
+			"rhsusf_acc_SpecterDR_A_3d", 
+			"rhsusf_acc_SpecterDR_CX", 
+			"rhsusf_acc_SpecterDR_CX_3D", 
+			"rhsusf_acc_SpecterDR_D", 
+			"rhsusf_acc_SpecterDR_OD", 
+			"rhsusf_acc_SpecterDR_D_3D", 
+			"rhsusf_acc_SpecterDR_OD_3D", 
+			"rhsusf_acc_anpvs27", 
+			"rhsusf_acc_anpas13gv1", 
+			"rhsusf_acc_M2A1", 
+			"rhsusf_acc_ACOG_MDO",
+			"optic_Nightstalker",
+			"optic_tws", 
+			"optic_tws_mg", 
+			"optic_NVS", 
+			"optic_DMS", 
+			"optic_LRPS", 
+			"optic_ams", 
+			"optic_AMS_snd", 
+			"optic_AMS_khk", 
+			"optic_KHS_blk", 
+			"optic_KHS_tan", 
+			"optic_KHS_hex", 
+			"optic_KHS_old", 
+			"optic_SOS", 
+			"optic_MRCO", 
+			"optic_Arco", 
+			"optic_aco", 
+			"optic_ACO_grn", 
+			"optic_aco_smg", 
+			"optic_ACO_grn_smg", 
+			"optic_hamr", 
+			"optic_Holosight", 
+			"optic_Holosight_smg", 
+			"optic_Hamr_khk_F", 
+			"optic_SOS_khk_F", 
+			"optic_Arco_ghex_F", 
+			"optic_Arco_blk_F", 
+			"optic_DMS_ghex_F", 
+			"optic_ERCO_blk_F", 
+			"optic_ERCO_khk_F", 
+			"optic_ERCO_snd_F", 
+			"optic_LRPS_ghex_F", 
+			"optic_LRPS_tna_F", 
+			"optic_Holosight_blk_F", 
+			"optic_Holosight_khk_F", 
+			"optic_Holosight_smg_blk_F", 
+			"optic_Holosight_smg_khk_F", 
+			"optic_Arco_AK_blk_F", 
+			"optic_Arco_AK_lush_F", 
+			"optic_Arco_AK_arid_F", 
+			"optic_DMS_weathered_F", 
+			"optic_DMS_weathered_Kir_F", 
+			"optic_Arco_lush_F", 
+			"optic_Arco_arid_F", 
+			"optic_Holosight_lush_F", 
+			"optic_Holosight_arid_F", 
+			"ACE_optic_Hamr_2D", 
+			"ACE_optic_Hamr_PIP", 
+			"ACE_optic_Arco_2D", 
+			"ACE_optic_Arco_PIP", 
+			"ACE_optic_MRCO_2D", 
+			"ACE_optic_MRCO_PIP", 
+			"ACE_optic_SOS_2D", 
+			"ACE_optic_SOS_PIP", 
+			"ACE_optic_LRPS_2D", 
+			"ACE_optic_LRPS_PIP"
+			};
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+			displayName = "Optics Slot";
+			iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+			iconPinpoint = "Bottom";
+			// SlotInfo
+			access = 1;
+			scope = 0;
+		};
+		class PointerSlot: PointerSlot {
+			iconPosition[] = {0.38, 0.42};
+			iconScale = 0.2;
+			compatibleItems[] = {
+				"acc_flashlight", 
+				"acc_pointer_IR", 
+				"rhs_acc_perst3",
+				"rhsusf_acc_wmx",
+				"rhsusf_acc_wmx_bk",
+				"rhsusf_acc_M952V",
+				"rhsusf_acc_anpeq15A",
+				"rhsusf_acc_anpeq15_h",
+				"rhsusf_acc_anpeq15_light_h", 
+				"rhsusf_acc_anpeq15_sc", 
+				"rhsusf_acc_anpeq15_light_sc",
+				"rhsusf_acc_anpeq15side",
+				"rhsusf_acc_anpeq15_bk_h",
+				"rhsusf_acc_anpeq15_bk_light_h",
+				"rhsusf_acc_anpeq15_bk_sc",
+				"rhsusf_acc_anpeq15_bk_light_sc",
+				"rhsusf_acc_anpeq15side_bk", 
+				"rhsusf_acc_anpeq15_wmx_h", 
+				"rhsusf_acc_anpeq15_wmx_light_h",
+				"rhsusf_acc_anpeq15_wmx_sc",
+				"rhsusf_acc_anpeq15_wmx_light_sc",
+				"rhsusf_acc_anpeq16a",
+				"rhsusf_acc_anpeq16a_light",
+				"rhsusf_acc_anpeq16a_light_top_sc",
+			};
+			iconPicture = "\A3\Weapons_F\Data\UI\attachment_side.paa";
+			iconPinpoint = "Center";
+			linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+			displayName = "Pointer Slot";
+			// SlotInfo
+			access = 1;
+			scope = 0;
+		};
+		class UnderBarrelSlot: UnderBarrelSlot {
+			iconPosition[] = {0.35, 0.85};
+			iconScale = 0.3;
+			compatibleItems[] = {"bipod_01_F_snd", "bipod_01_F_blk", "bipod_01_F_mtp", "bipod_01_F_khk", "bipod_02_F_blk", "bipod_02_F_tan", "bipod_02_F_hex", "bipod_02_F_lush", "bipod_02_F_arid", "bipod_03_F_blk", "bipod_03_F_oli"};
+			linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+			iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+			iconPinpoint = "Bottom";
+			// SlotInfo
+			access = 1;
+			scope = 0;
+		};
+		mass = 218;
+		allowedSlots[] = {};
+	};
+	ACE_RailHeightAboveBore = 4.73961;
+	ACE_IronSightBaseAngle = -0.0101613;
+	initSpeed = -0.985613;
+	ACE_barrelTwist = 359.918;
+	ACE_barrelLength = 549.91;
 	modes[] = {"manual", "burst"};
 	class manual {
 		class BaseSoundModeType {
@@ -740,8 +930,8 @@ class cfgWeapons
 			soundClosure[] = {"closure1", 0.33, "closure2", 0.33, "closure3", 0.34};
 		};
 		sounds[] = {"StandardSound", "SilencedSound"};
-		reloadTime = 0.085;
-		dispersion = 0.0008727;
+		reloadTime = 0.075;
+		dispersion = 0.0008;
 		soundContinuous = 0;
 		soundBurst = 0;
 		// Mode_FullAuto
@@ -787,9 +977,9 @@ class cfgWeapons
 	};
     scope = 2;
 	ace_arsenal_hide = 2
-	ace_overheating_mrbs = 3000;
+	ace_overheating_mrbs = 4500;
 	ace_overheating_slowdownFactor = 1;
-	ace_overheating_dispersion = 0.75;
+	ace_overheating_dispersion = 1;
     scopeCurator = 2;
 	ace_overheating_allowSwapBarrel = 1;
 	descriptionShort = "Medium Machine Gun<br />Caliber: 7.62x51 mm";
