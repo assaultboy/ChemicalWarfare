@@ -989,7 +989,7 @@ class cfgWeapons
     recoil = "recoil_mk20";
 	recoilProne = "recoil_saw";
 	magazines[] = {"150Rnd_762x51_Box_Tracer"};
-	magazineWell[] = {"CBA_762x54R_LINKS"};
+	magazineWell[] = {"CBA_762x51_LINKS"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_01_sand_CO.paa","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_02_sand_CO.paa","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_03_sand_CO.paa"};
 	hiddenSelectionsMaterials[] = {"\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_01_sand.rvmat","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_02_sand.rvmat","\A3\Weapons_F_Mark\Machineguns\MMG_01\Data\MMG_01_03_sand.rvmat"};
 

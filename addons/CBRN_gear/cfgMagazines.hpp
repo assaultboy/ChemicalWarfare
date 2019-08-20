@@ -18,4 +18,6 @@ class CfgMagazines {
 		displayNameShort = "Nerve Agent";
 		CBRN_chemicalLevel = 2;
 	};
+	
+
 };
