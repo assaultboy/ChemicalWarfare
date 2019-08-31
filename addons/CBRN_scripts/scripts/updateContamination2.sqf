@@ -1,0 +1,1 @@
+[_this, 5, 2] call CBRN_fnc_updateContaminatedArea;

@@ -1,6 +1,6 @@
-name = "CBRN Mod";
+name = "Chemical Warfare";
 tooltipOwned = "Tool Tip";
-overview = "This addon adds Chemical, Biological, Radiological, and Nuclear warfare.";
+overview = "This addon adds Chemical warfare to the game.";
 
 picture = "data\picture.paa"; 
 logo = "data\menu_logo.paa";

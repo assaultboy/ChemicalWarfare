@@ -1,19 +1,41 @@
-class CfgAmmo {
-	class SmokeShell;
-	class GrenadeHand_stone;
-
-	class CBRN_Gas_Base: SmokeShell {
-		effectsSmoke = "";
-		whistleDist = 0;    
-		whistleOnFire = 0;  
-		aiAmmoUsageFlags = "64"; // infantry
+class cfgAmmo
+{
+	class IEDLandSmall_Remote_Ammo;
+	class CBRN_IEDLandSmall_Type1_Remote_Ammo: IEDLandSmall_Remote_Ammo
+	{
+		CBRN_isPlacedExplosive = 1;
+		CBRN_chemicalType = 1
+		CBRN_heightOfBurst = 3;
+		CBRN_sprayWidth = 10;
+		CBRN_lifetime = 60;
 	};
+	class CBRN_IEDLandSmall_Type1_Command_Ammo: CBRN_IEDLandSmall_Type1_Remote_Ammo{mineTrigger = "RemoteTrigger";};
+	class CBRN_IEDLandSmall_Type1_Range_Ammo: CBRN_IEDLandSmall_Type1_Remote_Ammo{mineTrigger = "RangeTriggerShort";};
 	
-	class CBRN_Gas_Tinted: SmokeShell {
-		smokeColor[] = {0.855,1,0.419,0.455};
+	class CBRN_IEDLandSmall_Type2_Remote_Ammo: CBRN_IEDLandSmall_Type1_Remote_Ammo
+	{
+		CBRN_chemicalType = 2
 	};
+	class CBRN_IEDLandSmall_Type2_Command_Ammo: CBRN_IEDLandSmall_Type2_Remote_Ammo{mineTrigger = "RemoteTrigger";};
+	class CBRN_IEDLandSmall_Type2_Range_Ammo: CBRN_IEDLandSmall_Type2_Remote_Ammo{mineTrigger = "RangeTriggerShort";};
 	
-	class CBRN_Gas_Clear: SmokeShell {
-		smokeColor[] = {1,1,1,0.1};
+	
+	class IEDUrbanSmall_Remote_Ammo;
+	class CBRN_IEDUrbanSmall_Type1_Remote_Ammo: IEDUrbanSmall_Remote_Ammo
+	{
+		CBRN_isPlacedExplosive = 1;
+		CBRN_chemicalType = 1
+		CBRN_heightOfBurst = 3;
+		CBRN_sprayWidth = 10;
+		CBRN_lifetime = 60;
 	};
+	class CBRN_IEDUrbanSmall_Type1_Command_Ammo: CBRN_IEDUrbanSmall_Type1_Remote_Ammo{mineTrigger = "RemoteTrigger";};
+	class CBRN_IEDUrbanSmall_Type1_Range_Ammo: CBRN_IEDUrbanSmall_Type1_Remote_Ammo{mineTrigger = "RangeTriggerShort";};
+	
+	class CBRN_IEDUrbanSmall_Type2_Remote_Ammo:CBRN_IEDUrbanSmall_Type1_Remote_Ammo
+	{
+		CBRN_chemicalType = 2;
+	};
+	class CBRN_IEDUrbanSmall_Type2_Command_Ammo: CBRN_IEDUrbanSmall_Type2_Remote_Ammo{mineTrigger = "RemoteTrigger";};
+	class CBRN_IEDUrbanSmall_Type2_Range_Ammo: CBRN_IEDUrbanSmall_Type2_Remote_Ammo{mineTrigger = "RangeTriggerShort";};
 };

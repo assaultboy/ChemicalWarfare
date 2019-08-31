@@ -1,55 +1,65 @@
-class CfgFactionClasses
-{
-	class NO_CATEGORY;
-	class CBRN: NO_CATEGORY
-	{
-		displayName = "Chemical";
-	};
-};
-
-class CfgVehicles
+class cfgVehicles
 {
 	class Logic;
 	class Module_F: Logic
 	{
+		class AttributesBase
+		{
+			class Default;
+			class Edit;
+			class Combo;
+			class Checkbox;
+			class CheckboxNumber;
+			class ModuleDescription;
+			class Units;
+		};
 		class ModuleDescription
 		{
-			class AnyPlayer;
 			class AnyBrain;
-			class EmptyDetector;
 		};
 	};
 	
-	class CBRN_Module_Base : Module_F
+	
+	//Used by zeus to remove players exposure
+	class ModuleCBRN_RemoveExposure: Module_F
 	{
-		mapSize = 1;
+		displayName = "Remove Exposure";
 		author = "Assaultboy";
-		vehicleClass = "Modules";
-		category = "CBRN";
-		side = 7;
-
-		scope = 1;				// Editor visibility; 2 will show it in the menu, 1 will hide it.
-		scopeCurator = 1;		// Curator visibility; 2 will show it in the menu, 1 will hide it.
-
-		displayName = "CBRN Module Base";	// Name displayed in the menu
-		icon = "\CBRN_data\ui\icons\moduleIcon.paa";
-
-		function = "";			// Name of function triggered once conditions are met
-		functionPriority = 1;	// Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
-		isGlobal = 0;			// 0 for server only execution, 1 for remote execution on all clients upon mission start, 2 for persistent execution
-		isTriggerActivated = 0;	// 1 for module waiting until all synced triggers are activated
-		isDisposable = 0;		// 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
+		scope = 1;
+		scopeCurator = 2;
+		category = "CBRN_modules";
 		
-		class Arguments {};
-		class ModuleDescription: ModuleDescription
+		isGlobal = 1;
+		function = "CBRN_fnc_moduleRemoveExposure";
+		class Attributes: AttributesBase
 		{
-			description = "CBRN Module Base";
+			class Units: Units
+			{
+				property = "ModuleCBRN_RemoveExposure_Units";
+			};
 		};
 	};
 	
-	#include "mod_chemicalStrike_S.hpp"
-	#include "mod_chemicalStrike_N.hpp"
-	#include "mod_giveMasks.hpp"
-	#include "mod_settings.hpp"
-	#include "mod_contaminatedArea.hpp"
+	//Used by zeus to drop chemical shells
+	class ModuleOrdnanceMortar_F;
+	class ModuleOrdnanceMortar_Chemical_Type0: ModuleOrdnanceMortar_F
+	{
+		author = "Assaultboy";
+		displayName = "82 mm CS Gas";
+		category = "CBRN_modules";
+		function = "CBRN_fnc_moduleProjectile";
+		ammo = "Sh_82mm_AMOS_Chem_Type0";
+	};
+	
+	class ModuleOrdnanceMortar_Chemical_Type1: ModuleOrdnanceMortar_Chemical_Type0
+	{
+		displayName = "82 mm Asphyxiant Gas";
+		ammo = "Sh_82mm_AMOS_Chem_Type1";
+	};
+	
+	class ModuleOrdnanceMortar_Chemical_Type2: ModuleOrdnanceMortar_Chemical_Type0
+	{
+		displayName = "82 mm Nerve agent";
+		ammo = "Sh_82mm_AMOS_Chem_Type2";
+	};
 };

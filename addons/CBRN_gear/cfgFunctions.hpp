@@ -2,15 +2,19 @@ class CfgFunctions
 {
 	class CBRN
 	{
-		class items
+		class gear
 		{
 			file = "CBRN_gear\functions";
 			
-			class useItem {};
-			class handleGrenades {};
-			class getMOPPLevel {};
-			class equipMask {};
-			class checkTargetIsValid {};
+			class getProtectionLevel {};
+			class giveFactionMask {};
+			class handleACEExplosives {};
+			class handleCuratorExplosives {};
+			class hasMaskInInventory {};
+			class overlayHandler {};
+			class putMaskOnAction {};
+			class treatmentHandler {};
+			class handleProjectile {};
 		};
 	};
 };

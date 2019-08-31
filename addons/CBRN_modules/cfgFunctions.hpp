@@ -6,11 +6,10 @@ class CfgFunctions
 		{
 			file = "CBRN_modules\functions";
 			
-			class mod_chemicalStrike_level1 {};
-			class mod_chemicalStrike_level2 {};
-			class mod_giveMasks {};
-			class mod_settings {};
-			class mod_contaminatedArea {};
+			class moduleHandleCuratorPlacement {};
+			class moduleRemoveExposure {};
+			class moduleProjectile {};
+			
 		};
 	};
 };

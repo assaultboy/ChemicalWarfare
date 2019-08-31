@@ -1,21 +1,56 @@
 class cfgGlasses
 {
-	class None;
-	class G_CBRN_M50: None
+	//Vanilla stuff
+	class G_RegulatorMask_base_F;
+	
+	class G_RegulatorMask_F: G_RegulatorMask_base_F
+	{
+		CBRN_protectionLevel = 1 + 2;
+		CBRN_overlayType = 1;
+	};
+	
+	class G_AirPurifyingRespirator_01_base_F;
+	
+	class G_AirPurifyingRespirator_02_black_F :G_AirPurifyingRespirator_01_base_F
+	{
+		CBRN_protectionLevel = 1 + 2;
+		CBRN_overlayType = 1;
+	};
+	
+	class G_AirPurifyingRespirator_02_olive_F :G_AirPurifyingRespirator_01_base_F
+	{
+		CBRN_protectionLevel = 1 + 2;
+		CBRN_overlayType = 1;
+	};
+	
+	class G_AirPurifyingRespirator_02_sand_F :G_AirPurifyingRespirator_01_base_F
+	{
+		CBRN_protectionLevel = 1 + 2;
+		CBRN_overlayType = 1;
+	};
+	
+	class G_AirPurifyingRespirator_01_F :G_AirPurifyingRespirator_01_base_F
+	{
+		CBRN_protectionLevel = 1 + 2;
+		CBRN_overlayType = 1;
+	};
+	
+	//Free stuff
+	class G_CBRN_M50: G_RegulatorMask_F
 	{
 		author = "Assaultboy"; //Obvious
 		displayname = "M50 Promask"; //What the player sees
 		model = "\skn_nbc_units\models\skn_b_nbc_mask.p3d"; //A Path to the .p3d file
-		picture = "\CBRN_data\ui\items\maskM50.paa"; //This is what is shown in the inventroy etc
+		picture = "\CBRN_gear\data\items\maskM50.paa"; //This is what is shown in the inventory etc
 		identityTypes[] = {}; //This is used to add the mask to the random facewear selection pool. Leave it blank to keep it from being spawned rnadomly on people
 		mass = 4; //The 'weight' of the mask
 
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; //This is projected onto the screen when wearing the mask (Only when ACE is enabled, leave blank to disable)
-		
-		ACE_Resistance = 2; //How easy is it to break (2 being indestructable)
-		ACE_Protection = 1; //I forget what this one does but it prevents ace fuckery
+		//ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; //This is projected onto the screen when wearing the mask (Only when ACE is enabled, leave blank to disable)
 
-		CBRN_protection = 1; //Used by 'Chemical Warfare' mod to designate this mask as protective
+		CBRN_protectionLevel = 1 + 2; //Used by 'Chemical Warfare' mod to designate this mask as protective
+		CBRN_overlayType = 1;
+		
+		DLC = "";
 	};
 	
 	class G_CBRN_M50_Hood: G_CBRN_M50
@@ -23,6 +58,7 @@ class cfgGlasses
 		author = "Assaultboy";
 		displayname = "M50 Promask w/ Hood";
 		model = "\skn_nbc_units\models\skn_b_nbc_mask_hood.p3d";
+		CBRN_protectionLevel = 1 + 2 + 4;
 	};
 	
 	class G_CBRN_M04: G_CBRN_M50
@@ -30,8 +66,8 @@ class cfgGlasses
 		author = "Assaultboy";
 		displayname = "M04 Promask";
 		model = "\skn_nbc_units\models\skn_i_nbc_mask.p3d";
-		picture = "\CBRN_data\ui\items\maskM04.paa";
-		ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
+		picture = "\CBRN_gear\data\items\maskM04.paa";
+		//ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa";
 	};
 	
 	class G_CBRN_M04_Hood: G_CBRN_M04
@@ -39,14 +75,19 @@ class cfgGlasses
 		author = "Assaultboy";
 		displayname = "M04 Promask w/ Hood";
 		model = "\skn_nbc_units\models\skn_i_nbc_mask_hood.p3d";
+		
+		CBRN_protectionLevel = 1 + 2 + 4;
 	};
 	
 	class G_CBRN_S10: G_CBRN_M50
 	{
 		author = "Assaultboy";
-		displayname = "S10 Promask";
+		displayname = "S10 Promask w/ Hood";
 		model = "\skn_nbc_units\models\skn_o_nbc_mask.p3d";
-		picture = "\CBRN_data\ui\items\maskS10.paa";
-		ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa";
+		picture = "\CBRN_gear\data\items\maskS10.paa";
+		//ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa";
+		
+		CBRN_protectionLevel = 1 + 2 + 4;
+		CBRN_overlayType = 2;
 	};
 };
