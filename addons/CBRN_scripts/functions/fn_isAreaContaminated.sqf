@@ -1,9 +1,9 @@
 /*
 	DESCRIPTION:
-		This function will check if the given ASL position is contaminated
+		This function will check if the given position is contaminated
 		
 	PARAMETERS:
-		Position ASL
+		Position
 			The position to check
 			
 	RETURNS
@@ -16,7 +16,7 @@
 				Bool showing the area is contaminated with a type 3 chemical
 		
 	EXAMPLE
-		(getPosASL player) call CBRN_fnc_isAreaContaminated
+		(getPos player) call CBRN_fnc_isAreaContaminated
 */
 
 //We cycle through each chemical type and create our nifty array

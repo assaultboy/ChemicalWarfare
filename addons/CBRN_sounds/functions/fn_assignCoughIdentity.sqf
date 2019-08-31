@@ -15,7 +15,7 @@
 		Nothing
 		
 	EXAMPLE
-		[player, 1] call CBRN_fnc_assignCoughIdentity
+		[player, "assaultboy"] call CBRN_fnc_assignCoughIdentity
 */
 
 params ["_unit", ["_identity", ""]];
