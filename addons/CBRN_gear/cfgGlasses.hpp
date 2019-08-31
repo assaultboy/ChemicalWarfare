@@ -9,27 +9,27 @@ class cfgGlasses
 		CBRN_overlayType = 1;
 	};
 	
-	class G_AirPurifyingRespirator_01_base_F;
+	class G_AirPurifyingRespirator_02_base_F;
 	
-	class G_AirPurifyingRespirator_02_black_F :G_AirPurifyingRespirator_01_base_F
+	class G_AirPurifyingRespirator_02_black_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
 		CBRN_overlayType = 1;
 	};
 	
-	class G_AirPurifyingRespirator_02_olive_F :G_AirPurifyingRespirator_01_base_F
+	class G_AirPurifyingRespirator_02_olive_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
 		CBRN_overlayType = 1;
 	};
 	
-	class G_AirPurifyingRespirator_02_sand_F :G_AirPurifyingRespirator_01_base_F
+	class G_AirPurifyingRespirator_02_sand_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
 		CBRN_overlayType = 1;
 	};
 	
-	class G_AirPurifyingRespirator_01_F :G_AirPurifyingRespirator_01_base_F
+	class G_AirPurifyingRespirator_01_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
 		CBRN_overlayType = 1;
