@@ -31,9 +31,9 @@ CBRN_cachedPlayerGoggles = "";
 	CBRN_cachedPlayerGoggles = goggles player;
 	
 	//Get our style and set the control to that style
-	private _style = getNumber (configFile >> "cfgGlasses" >> CBRN_cachedPlayerGoggles >> "CBRN_overlayType");
+	private _style = getText (configFile >> "cfgGlasses" >> CBRN_cachedPlayerGoggles >> "CBRN_overlayType");
 	
-	//0 means no overlay since that is the default, anything else is valid
-	if (_style > 0) then {_effectControl ctrlSetText format ["CBRN_gear\data\hud\overlay_style%1.paa", _style]}
+	//"" means no overlay since that is the default, anything else is valid
+	if !(_style isEqualTo "") then {_effectControl ctrlSetText _style}
 	else {_effectControl ctrlSetText ""}
 }, 0, _effectControl] call CBA_fnc_addPerFrameHandler;

@@ -6,7 +6,7 @@ class cfgGlasses
 	class G_RegulatorMask_F: G_RegulatorMask_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 	};
 	
 	class G_AirPurifyingRespirator_02_base_F;
@@ -14,25 +14,25 @@ class cfgGlasses
 	class G_AirPurifyingRespirator_02_black_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 	};
 	
 	class G_AirPurifyingRespirator_02_olive_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 	};
 	
 	class G_AirPurifyingRespirator_02_sand_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 	};
 	
 	class G_AirPurifyingRespirator_01_F :G_AirPurifyingRespirator_02_base_F
 	{
 		CBRN_protectionLevel = 1 + 2;
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 	};
 	
 	//Free stuff
@@ -48,7 +48,7 @@ class cfgGlasses
 		//ACE_Overlay = "CBRN_data\ui\hud\maskSharedOverlay.paa"; //This is projected onto the screen when wearing the mask (Only when ACE is enabled, leave blank to disable)
 
 		CBRN_protectionLevel = 1 + 2; //Used by 'Chemical Warfare' mod to designate this mask as protective
-		CBRN_overlayType = 1;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
 		
 		DLC = "";
 	};
@@ -88,6 +88,6 @@ class cfgGlasses
 		//ACE_Overlay = "CBRN_data\ui\hud\maskOpforOverlay.paa";
 		
 		CBRN_protectionLevel = 1 + 2 + 4;
-		CBRN_overlayType = 2;
+		CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_round.paa";
 	};
 };
