@@ -32,7 +32,7 @@
 			
 			//Spawn da mist
 			[_pos, _sprayWidth, _chemLifeTime, _chemType, _heightOfBurst, 0.4] remoteExecCall ["CBRN_fnc_spawnMist", 0];
-		}, [_ammoClass, getPosASL _explosive], _fuzeTime + 0.1] call CBA_fnc_waitAndExecute;
+		}, [_ammoClass, getPos _explosive], _fuzeTime + 0.1] call CBA_fnc_waitAndExecute;
 	};
 	
 	true;

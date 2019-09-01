@@ -50,7 +50,7 @@ _ammoObject attachTo [_explosive, [0,0,0]];
 		private _chemType = [_ammoConfig, "CBRN_chemicalType", 0] call BIS_fnc_returnConfigEntry;
 		
 		//Spawn da mist
-		[getPosASL _ammoObject, _sprayWidth, _chemLifeTime, _chemType, _heightOfBurst, 0.4] remoteExecCall ["CBRN_fnc_spawnMist", 0];
+		[getPos _ammoObject, _sprayWidth, _chemLifeTime, _chemType, _heightOfBurst, 0.4] remoteExecCall ["CBRN_fnc_spawnMist", 0];
 		
 		//Detonate our ammo
 		_ammoObject setDamage 1;
