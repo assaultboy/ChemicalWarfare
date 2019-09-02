@@ -5,10 +5,12 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"ace_mk6mortar", "CBRN_vanillaMortar"};
+		requiredAddons[] = {"ace_interaction", "ace_mk6mortar", "CBRN_vanillaMortar"};
 	};
 };
 
 #include "cfgWeapons.hpp"
 #include "cfgMagazines.hpp"
-#include "cfgVehicles.hpp"
+//#include "cfgVehicles.hpp"
+#include "cfgFunctions.hpp"
+#include "XEH_postInit.hpp"

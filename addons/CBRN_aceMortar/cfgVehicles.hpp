@@ -1,7 +1,12 @@
+//This doesn't work fro some reason?
+//It removes the ACE_mainAction from the ace_actions
+//Anyone know why?
+
 class cfgVehicles
-{	
+{
 	class StaticWeapon;
-	class StaticMortar:StaticWeapon {
+	class StaticMortar: StaticWeapon
+	{
 		class ACE_Actions
 		{
 			class ace_mk6mortar_LoadActions;
@@ -10,9 +15,9 @@ class cfgVehicles
 	
 	class Mortar_01_base_F: StaticMortar
 	{
-		class ACE_Actions
+		class ACE_Actions: ACE_Actions
 		{
-			class ace_mk6mortar_LoadActions
+			class ace_mk6mortar_LoadActions: ace_mk6mortar_LoadActions
 			{
 				class ace_mk6mortar_loadMagazine_chemical_type0
 				{
