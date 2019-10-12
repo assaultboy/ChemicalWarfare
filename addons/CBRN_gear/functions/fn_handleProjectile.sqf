@@ -45,7 +45,7 @@ private _chemLifeTime = [_ammoClass, "CBRN_lifetime", 30] call BIS_fnc_returnCon
 		if ((((getPos _projectile) # 2) <= _heightOfBurst) && (((velocity _projectile) # 2) < 0)) then {
 		
 			//Fuck the real projectile, get that sweet claymore boom
-			private _det = "ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle [0,0,0];
+			private _det = "ClaymoreDirectionalMine_Remote_Ammo_Scripted_Fake" createVehicle [0,0,0];
 			_det setPos getPos _projectile;
 			_det setDamage 1;
 			
