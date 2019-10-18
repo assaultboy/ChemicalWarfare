@@ -46,7 +46,7 @@ class cfgAmmo
 	class CBRN_IEDUrbanSmall_Type2_Range_Ammo: CBRN_IEDUrbanSmall_Type2_Remote_Ammo{mineTrigger = "RangeTriggerShort";};
 	
 	class ClaymoreDirectionalMine_Remote_Ammo_Scripted;
-	class ClaymoreDirectionalMine_Remote_Ammo_Scripted_Fake: ClaymoreDirectionalMine_Remote_Ammo_Scripted
+	class CBRN_ClaymoreDirectionalMine_Remote_Ammo_Scripted_Fake: ClaymoreDirectionalMine_Remote_Ammo_Scripted
 	{
 		hit = 0;
 		indirectHit = 0;
